@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import Nav from './components/Nav';
 import About from './components/About';
-import Photos from './components/Photos';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 
 function App() {
   const [categories] = useState([
-    {
-      name: 'commercial',
-      description: 'Photos of grocery stores, food trucks, and other commercial projects',
-    },
-
-  ]);
+    
+        { name: 'Portfolio', description: 'Portraits of people in my life' },
+      ]);
+    
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
@@ -23,7 +22,10 @@ function App() {
       ></Nav>
       <main>
         <div>
-          <Photos> </Photos>
+        <Contact></Contact>
+
+        <Portfolio currentCategory={currentCategory}></Portfolio>
+
           <About></About>
         </div>
       </main>
