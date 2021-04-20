@@ -3,11 +3,14 @@ import Nav from './components/Nav';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import ContactForm from './components/ContactForm';
+import Footer from './components/Footer' 
 
 function App() {
   const [categories] = useState([
     
         { name: 'Portfolio', description: 'Portraits of people in my life' },
+         { name: 'Screenshots', description: ''},
+
       ]);
     
 
@@ -34,6 +37,7 @@ function App() {
                 <ContactForm></ContactForm>
               )}
           </main>
+          <Footer></Footer>
         </div>
       );
     }
