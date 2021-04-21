@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Card from "@material-ui/core/Card";
 
 import CardMedia from "@material-ui/core/CardMedia";
@@ -27,29 +27,32 @@ const Project = (props) => {
     <Card className={classes.root}>
       <CardActionArea>
         <CardMedia src={image} title={name} />
+       
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {name}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {tech}
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button>
-            <a href={deployed} target="_blank" rel="noreferrer">
-              Deployed Application
-            </a>
-          </Button>
-          <Button>
-            <a href={repo} target="_blank" rel="noreferrer">
-              Github Repository
-            </a>
-          </Button>
-        </CardActions>
-      </CardActionArea>
-    </Card>
+        <Typography gutterBottom variant="h5" component="h2">
+        {name}
+        </Typography>
+  <Typography variant="body2" color="textSecondary" component="p">
+    {tech}
+  </Typography>
+</CardContent>
+<CardActions>
+  <Button>
+    <a href={deployed} target="_blank" rel="noreferrer">
+      Deployed Application
+    </a>
+  </Button>
+  <Button>
+    <a href={repo} target="_blank" rel="noreferrer">
+      Github Repository
+    </a>
+  </Button>
+</CardActions>
+</CardActionArea>
+</Card>
+
   );
 };
 
 export default Project;
+

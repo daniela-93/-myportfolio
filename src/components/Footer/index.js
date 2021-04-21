@@ -12,13 +12,13 @@ const Footer = () => {
         <BottomNavigationAction
           label="Github"
           icon={<GithubIcon />}
-          href=""
+          href="https://github.com/daniela-93"
           target="_blank"
         />
         <BottomNavigationAction
           label="LinkedIn"
           icon={<LinkedInIcon />}
-          href=""
+          href="https://www.linkedin.com/in/daniela-acuna-6396021b6/"
           target="_blank"
         />
        

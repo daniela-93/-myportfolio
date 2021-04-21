@@ -1,30 +1,30 @@
-import React from 'react';
-import Project from "./project";
-
+import React from "react";
+import Project from "./Project";
 
 const Portfolio = () => {
   const projects = [
     {
-      name: "Weddings.Com",
+      name: "Music-Line",
       tech: "Javascript/Express/Handlebars.js/Node",
-      deployed: "",
-      image: "../../assets/small/0.jpg",
-      repo: "",
+      deployed: "https://guarded-dawn-15470.herokuapp.com/",
+      image: "../../assets/images/musicline.png",
+      repo: "https://github.com/axeliono/Music-Line",
     },
     {
       name: "Recipedia",
       tech: "SASS/HTML/JavaScript/API",
-      deployed: "",
-      image: "../../assets/small/recipe2.jpg",
-      repo: "",
+      deployed: "https://frecklescherokee.github.io/recipedia/",
+      image: "",
+      repo: "https://github.com/frecklescherokee/recipedia",
     },
     {
-      name: "Weather-Dashboard",
-      tech: "Javascript/API",
-      deployed: "",
-      image: "../../assets/small/recipedia.jpg",
-      repo: "",
-    },
+        name: "Weddings.com",
+        tech: "SASS/HTML/JavaScript/API",
+        deployed: "https://wedding-spot.herokuapp.com/",
+        image: "../../assets/images/weddings.png",
+        repo: "https://github.com/frecklescherokee/weddings",
+      },
+    
   ];
   return (
     <section className="projects-container">
