@@ -1,6 +1,6 @@
 import React from "react";
 import Project from "./Project";
-
+   
 const Portfolio = () => {
   const projects = [
     {
@@ -21,7 +21,7 @@ const Portfolio = () => {
         name: "Weddings.com",
         tech: "SASS/HTML/JavaScript/API",
         deployed: "https://wedding-spot.herokuapp.com/",
-        image: "../../assets/images/weddings.png",
+        image: "../../assets/images/wedding.png",
         repo: "https://github.com/frecklescherokee/weddings",
       },
     
