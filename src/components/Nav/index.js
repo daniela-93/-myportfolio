@@ -1,53 +1,31 @@
-import React from 'react';
-import { capitalizeFirstLetter } from '../../utils/helpers';
+import React from "react";
 
-function Nav(props) {
-  const {
-    categories = [],
-    setCurrentCategory,
-    currentCategory,
-  } = props;
 
+const Nav = (props) => {
+  const { setCurrentTab, tabs } = props;
   return (
-    <header className="flex-row px-1">
-      <h2>
-        <a data-testid="link" href="/">
-My Portfolio        </a>
-      </h2>
+    
+    <header className="flex-row px-1 py-1">
+            
+      <h1 className="px-2">Daniela Acuna</h1>
       <nav>
-        <ul className="flex-row">
-          <li className="mx-2">
-            <a data-testid="about" href="#about">
-              About me
-            </a>
-          </li>
-          {categories.map((category) => (
-            <li
-              className={`mx-1 ${
-                currentCategory.name === category.name && 'navActive'
-                }`}
-              key={category.name}
-            >
-              <span
+        <ul className="flex-row justify-center">
+          {tabs.map((tab) => (
+            <li className="mx-2" key={tab}>
+              <a
+                href={"#" + tab.toLowerCase()}
                 onClick={() => {
-                  setCurrentCategory(category)
+                  setCurrentTab(tab);
                 }}
               >
-                {capitalizeFirstLetter(category.name)}
-              </span>
+                {tab}
+              </a>
             </li>
-         
-         
-         
-         ))}
-          <li className="mx-2">
-            <span>Contact</span>
-          </li>
-         
+          ))}
         </ul>
       </nav>
     </header>
   );
-}
+};
 
 export default Nav;

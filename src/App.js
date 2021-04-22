@@ -1,36 +1,41 @@
-import React, { useState } from 'react';
-import Nav from './components/Nav';
-import About from './components/About';
-import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
+import React, { useState } from "react";
+import "./index.css";
+import "./App.css";
+import Nav from "./components/Nav";
+import About from "./components/About";
+import ContactForm from './components/ContactForm'
+import Portfolio from "./components/Portfolio";
+import Footer from './components/Footer'
+import Resume from "./components/Resume";
 
 function App() {
-  const [categories] = useState([
-    
-        { name: 'Portfolio', description: 'Portraits of people in my life' },
-      ]);
-    
+  const tabs = ["ABOUT", "PROJECTS", "CONTACT", "RESUME", ];
+  const [currentTab, setCurrentTab] = useState(tabs[0]);
 
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
+  const renderTab = () => {
+    switch (currentTab) {
+      case "ABOUT":
+        return <About />;
+      case "PROJECTS":
+        return <Portfolio/>
+      case "CONTACT":
+        return <ContactForm/>;
+       case "RESUME":
+         return <Resume/>
+     
 
+      default:
+        return <About />;
+    }
+  };
   return (
-    <div>
-      <Nav
-        categories={categories}
-        setCurrentCategory={setCurrentCategory}
-        currentCategory={currentCategory}
-      ></Nav>
-      <main>
-        <div>
-        <Contact></Contact>
-
-        <Portfolio currentCategory={currentCategory}></Portfolio>
-
-          <About></About>
-        </div>
+    <>
+      <Nav tabs={tabs} currentTab={currentTab} setCurrentTab={setCurrentTab} />
+      <main>{
+      renderTab()}
       </main>
-    </div>
+      <Footer/>
+    </>
   );
 }
-
 export default App;
