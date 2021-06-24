@@ -24,6 +24,15 @@ const Portfolio = () => {
         image: "../../assets/images/wedding.png",
         repo: "https://github.com/frecklescherokee/weddings",
       },
+      {
+        name: "Budget Tracker",
+        tech: "SASS/HTML/JavaScript/API",
+        deployed: "https://morning-refuge-22242.herokuapp.com/",
+        image: "",
+        repo: "https://github.com/daniela-93/-BudgetTracker",
+      },
+      
+
     
   ];
   return (
